@@ -1,0 +1,15 @@
+head
+  title="Welcome to " + title
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css')
+body
+  div.ui.container
+    h1=title
+    h2=message
+    if groups
+      each group in groups
+        div.ui.orange.inverted.segment
+          div.ui.three.column.stackable.grid
+            div.column=group.name
+            div.column=group.city+', '+group.state+', '+group.country
+            div.column
+              div.ui.button.orange='Test'
